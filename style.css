@@ -5,7 +5,11 @@ body {
 
 h1 {
 
-    color: whitesmoke;
+    color: lightskyblue;
     text-align: center;
   
+}
+
+.nav-link {
+    color: lightskyblue;
 }
