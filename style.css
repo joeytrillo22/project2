@@ -1,6 +1,6 @@
+/* adding background */
 body {
-
-    background: url(images/space.png)
+    background-image: url("images/space.png");
 }
 
 h1 {
@@ -12,4 +12,21 @@ h1 {
 
 .nav-link {
     color: lightskyblue;
+}
+
+#searchbar {
+
+    text-align: center;
+    color: lightskyblue
+}
+
+button {
+     
+background-color: lightskyblue; /* Remove background color */
+border: 2px solid whitesmoke; /* Border thickness, line style, and color */
+ 
+border-radius: 5px; /* Adds curve to border corners */
+ 
+text-transform: uppercase; /* Make letters uppercase */
+ 
 }

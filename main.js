@@ -2,16 +2,30 @@
 
 // URL https://api.giphy.com/v1/gifs/search?api_key=49tPTYHGFwcqLv0N15BPgc425XU6C48E&q=&limit=10&offset=0&rating=PG&lang=en
 
-$(document).ready(()=>{
-    $("#submit").click(()=>{
-        let userinput = $("#search").val()
-        //alert(userinput)
+function fetchDataFromGiphy (searchTerm) {
+    let url = `https://api.giphy.com/v1/gifs/search?
+    api_key=49tPTYHGFwcqLv0N15BPgc425XU6C48E&q=${searchTerm}&limit=10`
+    console.log(url);
+
+    fetch(url)
+    .then(fuction(response) {
+        return response.json();
+    }).then(function(data){
+        console.log(data);
     })
-    $.ajax({
-        url: `https://api.giphy.com/v1/gifs/search?api_key=49tPTYHGFwcqLv0N15BPgc425XU6C48E&q=${userinput}&limit=10&offset=0&rating=PG&lang=en`
-    })
-    .done((res)=>{
-        console.log("res", res)
-     
-    })
-})
+
+
+
+}
+function bootApp() {
+    console.log('Page is loaded up!');
+    console.log('Jquery is available', $);
+
+    let searchTerm = 'corona';
+    fetchDataFromGiphy(searchTerm)
+
+}
+
+
+
+$(bootApp);
