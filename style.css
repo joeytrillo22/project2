@@ -4,16 +4,18 @@ body {
 }
 
 h1 {
-
+    font-family: 'Indie Flower', cursive;
     color: lightskyblue;
     text-align: center;
   
 }
 p{
+    font-family: 'Indie Flower', cursive;
     color: lightskyblue;
     text-align: center;
 }
 .nav-link {
+    font-family: 'Indie Flower', cursive;
     color: lightskyblue;
 }
 
@@ -24,7 +26,7 @@ form {
 }
 
 button {
-     
+    font-family: 'Indie Flower', cursive;
 background-color: lightskyblue; /* Remove background color */
 border: 2px solid whitesmoke; /* Border thickness, line style, and color */
  
@@ -35,6 +37,7 @@ text-transform: uppercase; /* Make letters uppercase */
 }
 
 input {
+    font-family: 'Indie Flower', cursive;
     width: 35%;
     border: 4px lightblue;
     border-radius: 4px;
