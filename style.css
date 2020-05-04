@@ -1,33 +1,33 @@
 /* adding background */
 body {
-    background-image: url("images/space.png");
+    background-image: url("images/space3.jpg");
 }
 
 h1 {
     font-family: 'Indie Flower', cursive;
-    color: lightskyblue;
+    color: white;
     text-align: center;
   
 }
 p{
     font-family: 'Indie Flower', cursive;
-    color: lightskyblue;
+    color: whitesmoke;
     text-align: center;
 }
 .nav-link {
     font-family: 'Indie Flower', cursive;
-    color: lightskyblue;
+    color: whitesmoke;
 }
 
 form {
 
     text-align: center;
-    color: lightskyblue
+    color: whitesmoke
 }
 
 button {
     font-family: 'Indie Flower', cursive;
-background-color: lightskyblue; /* Remove background color */
+background-color: whitesmoke; /* Remove background color */
 border: 2px solid whitesmoke; /* Border thickness, line style, and color */
  
 border-radius: 5px; /* Adds curve to border corners */
