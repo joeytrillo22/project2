@@ -9,12 +9,15 @@ h1 {
     text-align: center;
   
 }
-
+p{
+    color: lightskyblue;
+    text-align: center;
+}
 .nav-link {
     color: lightskyblue;
 }
 
-#searchbar {
+form {
 
     text-align: center;
     color: lightskyblue
@@ -29,4 +32,10 @@ border-radius: 5px; /* Adds curve to border corners */
  
 text-transform: uppercase; /* Make letters uppercase */
  
+}
+
+input {
+    width: 35%;
+    border: 4px lightblue;
+    border-radius: 4px;
 }
