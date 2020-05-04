@@ -2,44 +2,23 @@
 
 // URL https://api.giphy.com/v1/gifs/search?api_key=49tPTYHGFwcqLv0N15BPgc425XU6C48E&q=&limit=10&offset=0&rating=PG&lang=en
 
-
-function displayResults (results) {
-    let myHtml = '';
-    for(res of results){
-        //console.log(res);
-        myHtml = myHtml + `<div class= 'row'> 
-        <div class= 'col-sm-4'>               
-        <img src=${res.images.original.url} /> 
-        </div>`
-    }
-
-    myHtml = myHtml + "</div>"
-
-    console.log(myHtml);
-    $('#results').html(myHtml)
-}
-function fetchDataFromGiphy (searchTerm) {
-    let url = `https://api.giphy.com/v1/gifs/search?api_key=49tPTYHGFwcqLv0N15BPgc425XU6C48E&q=${searchTerm}&limit=10`
-    console.log(url);
-
-    fetch(url)
-    .then(function(response) {
-        return response.json();
-    }).then(function(result){
-       console.log(result.data);
-        displayResults(result.data)
+$(function() {
+    $(".button").click(function() {
+        $(".results").empty();
+        $("form").on("submit", function (e){
+            e.preventDefault();
+                getData();
+        });
+    });
+});
+function getData() {
+    var input = $(".search").val();
+        var xhr = $.get("https://api.giphy.com/v1/gifs/search?q="+input+"&api_key=49tPTYHGFwcqLv0N15BPgc425XU6C48E&limit=10");
+        xhr.done(function (response) {
+        console.log("success got data", response);
+        var jiffs =response.data;
+        for (i in jiffs) {
+            $(".results").append("<img src='"  + jiffs[i].images.original.url + "' style= 'height: 250px; width: 250px; '/>");
+        }
     })
-
 }
-function bootApp() {
-    //console.log('Page is loaded up!');
-    //console.log('Jquery is available', $);
-
-    let searchTerm = 'corona';
-    fetchDataFromGiphy(searchTerm)
-
-}
-
-
-
-$(bootApp);
